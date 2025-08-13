@@ -2,8 +2,6 @@ import pygame
 from settings import *
 from utils import resource_path
 
-
-
 class Player(pygame.sprite.Sprite):
     def __init__(self, pos, groups):
         super().__init__(groups)
