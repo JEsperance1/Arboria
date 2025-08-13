@@ -1,11 +1,11 @@
 import pygame, sys
 
 
-from settings import *
-from level import Level
-from tile import Tile
-from debug import debug
-from utils import resource_path
+from src.settings import *
+from src.level import Level
+from src.tile import Tile
+from src.debug import debug
+from src.utils import resource_path
 
 class Game:
     def __init__(self):
