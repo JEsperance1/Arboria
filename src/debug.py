@@ -1,4 +1,5 @@
 import pygame
+from utils import resource_path
 
 pygame.init()
 font = pygame.font.Font(None, 30)

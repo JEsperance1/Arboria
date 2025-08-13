@@ -4,7 +4,7 @@ from tile import Tile
 from player import Player
 from ground import Ground
 from debug import debug
-
+from utils import resource_path
 
 class Level:
     def __init__(self):

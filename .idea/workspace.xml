@@ -5,8 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="39d78b6a-97c0-49ba-871a-4cc984681d50" name="Changes" comment="standard push">
+      <change afterPath="$PROJECT_DIR$/assets/sprites/LPCsnowTrees.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/sprites/hero.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/sprites/rock.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/sprites/tile_161.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.venv/lib/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/debug.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/debug.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ground.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/ground.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/level.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/level.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/player.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/player.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sprites.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/sprites.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tile.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/tile.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,28 +55,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.debug.executor&quot;: &quot;Run&quot;,
-    &quot;Python.level.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main.executor&quot;: &quot;Run&quot;,
-    &quot;Python.scrap.executor&quot;: &quot;Run&quot;,
-    &quot;Python.settings.executor&quot;: &quot;Run&quot;,
-    &quot;Python.tile.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/jordanesperance/PycharmProjects/ArboriaAttempt1/.venv/lib&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.debug.executor": "Run",
+    "Python.ground.executor": "Run",
+    "Python.level.executor": "Run",
+    "Python.main.executor": "Run",
+    "Python.player.executor": "Run",
+    "Python.scrap.executor": "Run",
+    "Python.settings.executor": "Run",
+    "Python.tile.executor": "Run",
+    "Python.utils.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/jordanesperance/PycharmProjects/ArboriaAttempt1",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/.venv/lib" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/.venv/Sprites" />
       <recent name="$PROJECT_DIR$/.venv" />
+      <recent name="$PROJECT_DIR$/src/assets" />
+      <recent name="$PROJECT_DIR$/.venv/Sprites" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -172,7 +189,87 @@
       <option name="project" value="LOCAL" />
       <updated>1755009196411</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="standard push">
+      <option name="closed" value="true" />
+      <created>1755009347134</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1755009347134</updated>
+    </task>
+    <task id="LOCAL-00013" summary="standard push">
+      <option name="closed" value="true" />
+      <created>1755016212679</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1755016212679</updated>
+    </task>
+    <task id="LOCAL-00014" summary="standard push">
+      <option name="closed" value="true" />
+      <created>1755018321960</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1755018321960</updated>
+    </task>
+    <task id="LOCAL-00015" summary="standard push">
+      <option name="closed" value="true" />
+      <created>1755020713213</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1755020713213</updated>
+    </task>
+    <task id="LOCAL-00016" summary="standard push">
+      <option name="closed" value="true" />
+      <created>1755020964417</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1755020964417</updated>
+    </task>
+    <task id="LOCAL-00017" summary="standard push">
+      <option name="closed" value="true" />
+      <created>1755024182742</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1755024182742</updated>
+    </task>
+    <task id="LOCAL-00018" summary="standard push">
+      <option name="closed" value="true" />
+      <created>1755024284301</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1755024284301</updated>
+    </task>
+    <task id="LOCAL-00019" summary="standard push">
+      <option name="closed" value="true" />
+      <created>1755024902797</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1755024902797</updated>
+    </task>
+    <task id="LOCAL-00020" summary="standard push">
+      <option name="closed" value="true" />
+      <created>1755026063118</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1755026063118</updated>
+    </task>
+    <task id="LOCAL-00021" summary="standard push">
+      <option name="closed" value="true" />
+      <created>1755028380783</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1755028380783</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
