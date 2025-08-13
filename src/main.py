@@ -6,7 +6,6 @@ from tile import Tile
 from debug import debug
 from utils import resource_path
 
-
 class Game:
     def __init__(self):
 
