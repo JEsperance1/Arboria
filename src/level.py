@@ -13,6 +13,7 @@ class Level:
         self.obstacle_sprites = pygame.sprite.Group()
         self.display_surface = pygame.display.get_surface()
         self.create_map()
+        self.player
 
     def create_map(self):
         for row_index, row in enumerate(WORLD_MAP):
@@ -20,17 +21,14 @@ class Level:
                 x = column_index * TILESIZE
                 y = row_index * TILESIZE
                 if column == 'x':
-                    Ground((x, y), ([self.obstacle_sprites], [self.visible_sprites]))
-                    Tile((x, y), ([self.obstacle_sprites], [self.visible_sprites]))
+                    Ground((x, y), (self.obstacle_sprites, self.visible_sprites))
+                    Tile((x, y), (self.obstacle_sprites, self.visible_sprites))
                 elif column == '':
                     #Ground((x, y), ([self.obstacle_sprites], [self.visible_sprites]))
                     pass
                 elif column == 'p':
-                    #Ground((x, y), ([self.obstacle_sprites], [self.visible_sprites]))
-                    self.player = Player((x, y), [self.visible_sprites])
+                    self. player = Player((x, y), [self.visible_sprites], self.obstacle_sprites)
 
-
-                    pass
                 else:
                     #render more walkable ground
                     pass
