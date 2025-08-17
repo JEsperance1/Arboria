@@ -10,3 +10,4 @@ class Ground(pygame.sprite.Sprite):
         original_image = pygame.image.load(resource_path("assets/sprites/tile_161.png")).convert_alpha()
         self.image = pygame.transform.scale(original_image, (64, 64))
         self.rect = self.image.get_rect(topleft=pos)
+        self.hitbox = self.rect.copy()
