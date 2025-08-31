@@ -46,7 +46,15 @@ class YSortCameraGroup(pygame.sprite.Group):
         self.halfheight = self.display_surface.get_height() // 2
         self.offset = pygame.math.Vector2()
 
+        self.floor_surf = pygame.image.load(resource_path("assets/tilemaps/snow-home.png")).convert()
+        self.floor_rect = self.floor_surf.get_rect(topleft = (0,0))
+
     def custom_draw(self, player):
+
+        floor_offset_pos = self.floor_rect.topleft - self.offset
+        self.display_surface.blit(self.floor_surf, floor_offset_pos)
+
+
         for sprite in sorted(self.sprites(),key = lambda sprite: sprite.rect.center):
             self.offset.x = player.rect.centerx - self.halfwidth
             self.offset.y = player.rect.centery - self.halfheight
