@@ -1,5 +1,5 @@
 import pygame
-from pygame.examples.sprite_texture import sprite
+# from pygame.examples.sprite_texture import sprite
 
 from settings import *
 from utils import resource_path
