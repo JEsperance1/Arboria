@@ -2,6 +2,7 @@ import pygame
 from settings import *
 from tile import Tile
 from player import Player
+from enemy import Enemy
 from ground import Ground
 from debug import debug
 from utils import resource_path
@@ -13,6 +14,7 @@ class Level:
         self.obstacle_sprites = pygame.sprite.Group()
         self.create_map()
         self.player
+        self.enemy
 
     def create_map(self):
         for row_index, row in enumerate(WORLD_MAP):
@@ -28,6 +30,9 @@ class Level:
                 elif column == 'p':
                     #Ground((x, y), (self.obstacle_sprites, self.visible_sprites))
                     self.player = Player((x, y), [self.visible_sprites], self.obstacle_sprites)
+                elif column == 'e':
+                    #Ground((x, y), (self.obstacle_sprites, self.visible_sprites))
+                    self.enemy = Enemy((x, y), [self.visible_sprites], self.obstacle_sprites)
 
                 else:
                     #render more walkable ground
