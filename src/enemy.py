@@ -8,20 +8,21 @@ from settings import *
 from utils import resource_path
 
 class Enemy(pygame.sprite.Sprite):
-    def __init__(self, pos, groups, obstacle_sprites):
+    def __init__(self, pos, groups, obstacle_sprites, player):
         super().__init__(groups)
 
         original_image = pygame.image.load(resource_path("assets/sprites/SimpleEnemies Bat_Idle_0.png")).convert_alpha()
         self.image = pygame.transform.scale(original_image, (64, 64))
         self.rect = self.image.get_rect(topleft=pos)
         self.direction = pygame.math.Vector2()
-        self.speed = 5
+        self.speed = 3
         self.hitbox = self.rect.inflate(0, -26)
         self.loop_phase = 0
         self.last_animation_time = 0
         self.last_movement_time = 0
 
         self.obstacles = obstacle_sprites
+        self.player = player
 
     def animation_loop(self):
 
@@ -37,17 +38,29 @@ class Enemy(pygame.sprite.Sprite):
 
 
     def random_movement_input(self):
-            enemy_direction = random.randint(0,3)
+            enemy_direction = random.randint(0,7)
             if enemy_direction == 0:
                 self.direction.y = -1
             elif enemy_direction == 1:
                 self.direction.y = 1
+            elif enemy_direction == 4:
+                self.direction.y = -1
+                self.direction.x = -1
+            elif enemy_direction == 5:
+                self.direction.y = -1
+                self.direction.x = 1
             else:
                 self.direction.y = 0
 
             if enemy_direction == 2:
                 self.direction.x = -1
             elif enemy_direction == 3:
+                self.direction.x = 1
+            elif enemy_direction == 6:
+                self.direction.y = 1
+                self.direction.x = -1
+            elif enemy_direction == 7:
+                self.direction.y = 1
                 self.direction.x = 1
             else:
                 self.direction.x = 0

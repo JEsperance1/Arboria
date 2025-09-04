@@ -12,6 +12,7 @@ class Level:
         #sprite group setup
         self.visible_sprites = YSortCameraGroup()
         self.obstacle_sprites = pygame.sprite.Group()
+        self.enemy_sprites = pygame.sprite.Group()
         self.create_map()
         self.player
         self.enemy
@@ -29,10 +30,10 @@ class Level:
                     Tile((x, y), (self.obstacle_sprites, self.visible_sprites))
                 elif column == 'p':
                     #Ground((x, y), (self.obstacle_sprites, self.visible_sprites))
-                    self.player = Player((x, y), [self.visible_sprites], self.obstacle_sprites)
+                    self.player = Player((x, y), [self.visible_sprites], self.obstacle_sprites, self.enemy_sprites)
                 elif column == 'e':
                     #Ground((x, y), (self.obstacle_sprites, self.visible_sprites))
-                    self.enemy = Enemy((x, y), [self.visible_sprites], self.obstacle_sprites)
+                    self.enemy = Enemy((x, y), [self.visible_sprites, self.enemy_sprites], self.obstacle_sprites, self.player)
 
                 else:
                     #render more walkable ground

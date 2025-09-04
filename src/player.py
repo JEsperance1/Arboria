@@ -5,7 +5,7 @@ from settings import *
 from utils import resource_path
 
 class Player(pygame.sprite.Sprite):
-    def __init__(self, pos, groups, obstacle_sprites):
+    def __init__(self, pos, groups, obstacle_sprites, enemy_sprites):
         super().__init__(groups)
 
         original_image = pygame.image.load(resource_path("assets/sprites/hero.png")).convert_alpha()
@@ -16,6 +16,7 @@ class Player(pygame.sprite.Sprite):
         self.hitbox = self.rect.inflate(0, -26)
 
         self.obstacles = obstacle_sprites
+        self.enemies = enemy_sprites
 
     def input(self):
             keys = pygame.key.get_pressed()
@@ -48,6 +49,8 @@ class Player(pygame.sprite.Sprite):
         self.input()
         self.move(self.speed)
 
+
+#collision logic - includes enemy sprite collision and obstacle sprite collision
     def collision(self, direction):
         for sprite in self.obstacles:
             if direction == 'horizontal':
@@ -64,5 +67,29 @@ class Player(pygame.sprite.Sprite):
                         self.hitbox.bottom = sprite.hitbox.top
                     if self.direction.y < 0:
                         self.hitbox.top = sprite.hitbox.bottom
+
+        for sprite in self.enemies:
+            if direction == 'horizontal':
+                if sprite.hitbox.colliderect(self.hitbox):
+                    if self.direction.x > 0:
+                        self.hitbox.right = sprite.hitbox.left
+                        print("you lost 1 health")
+                    if self.direction.x < 0:
+                        self.hitbox.left = sprite.hitbox.right
+                        print("you lost 1 health")
+
+
+
+
+        for sprite in self.enemies:
+            if direction == 'vertical':
+                if sprite.hitbox.colliderect(self.hitbox):
+                    if self.direction.y > 0:
+                        self.hitbox.bottom = sprite.hitbox.top
+                        print("you lost 1 health")
+                    if self.direction.y < 0:
+                        self.hitbox.top = sprite.hitbox.bottom
+                        print("you lost 1 health")
+
 
 
