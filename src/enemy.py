@@ -11,7 +11,7 @@ class Enemy(pygame.sprite.Sprite):
     def __init__(self, pos, groups, obstacle_sprites, player):
         super().__init__(groups)
 
-        original_image = pygame.image.load(resource_path("assets/sprites/SimpleEnemies Bat_Idle_0.png")).convert_alpha()
+        original_image = pygame.image.load(resource_path("assets/sprites/SimpleEnemies Bat_Idle_0.png"))
         self.image = pygame.transform.scale(original_image, (64, 64))
         self.rect = self.image.get_rect(topleft=pos)
         self.direction = pygame.math.Vector2()
@@ -29,7 +29,7 @@ class Enemy(pygame.sprite.Sprite):
         image_path = f"assets/sprites/SimpleEnemies Bat_Idle_{self.loop_phase}.png"
 
         # Load → convert → scale
-        image_surface = pygame.image.load(image_path).convert_alpha()
+        image_surface = pygame.image.load(resource_path(image_path))
         self.image = pygame.transform.scale(image_surface, (64, 64))
 
         self.loop_phase = (self.loop_phase + 1) % 4
